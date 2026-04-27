@@ -74,11 +74,11 @@
            05 OUT-CHRSTC      PIC X(01).
            05 FILLER          PIC X(39).
       *-------
-       COPY FUNCCODE SUPPRESS.
-       COPY CHSSA   SUPPRESS.
-       COPY CHRSEG  SUPPRESS.
-       COPY CHCEDSEG SUPPRESS.
-       COPY CMDWCVDT SUPPRESS.
+           COPY FUNCCODE SUPPRESS.
+           COPY CHSSA   SUPPRESS.
+           COPY CHRSEG  SUPPRESS.
+           COPY CHCEDSEG SUPPRESS.
+           COPY CMDWCVDT SUPPRESS.
       *PSB=ATM030
        LINKAGE SECTION.
        01  IOPCB.  COPY DBPCB  SUPPRESS.
@@ -105,7 +105,7 @@
                    MOVE WK-YY TO BEGIN-YY END-YY
                    MOVE WK-MM TO BEGIN-MM END-MM
                    MOVE WK-DD TO END-DD
-TEST  *             MOVE '00960209' TO BEGINTIME ENDTIME
+TEST  *            MOVE '00960209' TO BEGINTIME ENDTIME
                    MOVE 'Y'        TO DATE-SW
                ELSE
                    IF TYPE-RPT = 'M'
